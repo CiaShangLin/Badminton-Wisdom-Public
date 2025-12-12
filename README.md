@@ -14,19 +14,19 @@
 
 ```mermaid
 graph TD
-    User[使用者 User] -->|HTTPS| Frontend[前端應用 (React/Vite)]
-    Frontend -->|RESTful API| Backend[後端服務 (FastAPI)]
+    User[使用者 User] -->|HTTPS| Frontend[前端應用 React/Vite]
+    Frontend -->|RESTful API| Backend[後端服務 FastAPI]
     
-    subgraph "Backend Services"
+    subgraph BackendServices [Backend Services]
         Backend -->|ORM| DB[(PostgreSQL Database)]
         Backend -->|Data Sync| YT[YouTube Data API]
         Backend -->|Data Sync| Bili[Bilibili API]
-        Backend -->|Schedule| Tasks[排程任務 (APScheduler)]
+        Backend -->|Schedule| Tasks[排程任務 APScheduler]
     end
     
-    subgraph "Deployment"
+    subgraph Deployment
         Frontend -.->|Deploy| Vercel[Vercel]
-        Backend -.->|Deploy| Railway[Railway / Render]
+        Backend -.->|Deploy| Render[Railway / Render]
     end
 ```
 
@@ -60,14 +60,14 @@ graph TD
 建立了一個完整的羽球拍與裝備資料庫，包含規格參數（平衡點、中桿軟硬度、重量等）。
 *   **特色**: 支援詳細的篩選與比較功能，幫助球友找到最適合的裝備。
 *   <!-- 建議圖片: 裝備列表頁面或詳細規格比較圖 -->
-    ![裝備數據庫預覽](https://via.placeholder.com/800x450?text=Equipment+Database+Screenshot)
+    ![裝備數據庫預覽](https://github.com/CiaShangLin/Badminton-Wisdom-Public/blob/main/imgaes/racket_list.png)
 
-### 2. 📺 賽事影片聚合 (Video Aggregation)
+### 2. 📺 球拍測評影片聚合 (Video Aggregation)
 自動從 YouTube 與 Bilibili 抓取最新的羽球賽事精華與教學影片。
 *   **自動化**: 透過後端排程器 (Cron Jobs) 定期同步最新內容。
-*   **分類**: 依據選手、賽事類型自動標籤化。
+*   **分類**: 依據廠牌，型號區分。
 *   <!-- 建議圖片: 影片列表或播放介面 -->
-    ![影片聚合預覽](https://via.placeholder.com/800x450?text=Video+Gallery+Screenshot)
+    ![影片聚合預覽](https://github.com/CiaShangLin/Badminton-Wisdom-Public/blob/main/imgaes/video_list.png)
 
 ---
 
