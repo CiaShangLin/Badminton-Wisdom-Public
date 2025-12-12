@@ -1,8 +1,12 @@
-線上預覽 (Live Demo): https://shuttlecock-wisdom.vercel.app/
+<div align="center">
 
 # 🏸 Badminton Wisdom | 羽球智慧平台
 
-**Badminton Wisdom** 是集合了Youtube和B站的羽球拍評測影片的網頁合輯。
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue?style=for-the-badge&logo=vercel&logoColor=white)](https://shuttlecock-wisdom.vercel.app/)
+
+**Badminton Wisdom** 是一個集合了 YouTube 和 Bilibili 羽球拍評測影片的智慧型網頁合輯。
+
+</div>
 
 > 🚧 **Note**: 本儲存庫為專案的公開說明文件 (Public Documentation)，實際的原始碼 (Source Code) 託管於私有的 Backend 與 Frontend 儲存庫中。
 
@@ -75,7 +79,7 @@ graph TD
 
 *   **Frontend**: 自動化部署於 **Vercel**，支援 CI/CD，每次 Push 自動建置。
 *   **Backend**: 容器化部署於  **Render**，確保高可用性與自動擴展。
-*   **Database**: 託管於雲端 Supabase 服務。
+*   **Database**: 託管於雲端 **Supabase** 服務。
 *   **Optimization**: 使用 **UptimeRobot** 與 **GitHub Actions** 定時呼叫 Render 後端服務，防止實例進入休眠模式，顯著優化首屏加載速度 (Cold Start)。
 
 ---
